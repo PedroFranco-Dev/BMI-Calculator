@@ -12,6 +12,49 @@
 <script src="./js/script.js" defer></script>
 </head>
 <body>
-    
+    <div class="container">
+        <div id="calc-container">
+            <h2>BMI Calculator</h2>
+            <form id="bmi-form">
+                <div class="form-inputs">
+                    <div class="form-control">
+                        <label 
+                        for="height">Height:</label>
+                        <input 
+                        type="text" 
+                        name="height" 
+                        id="height" 
+                        placeholder="Ex: 1,60"/>
+                    </div>
+                    <div class="form-control">
+                        <label 
+                        for="weight">Weight:</label>
+                        <input 
+                        type="text" 
+                        name="weight" 
+                        id="weight" 
+                        placeholder="Ex: 78,5"/>
+                    </div>
+                </div>
+                <div class="action-control">
+                    <button id="calc-btn">Calculate</button>
+                    <button id="clear-btn">Clear Inputs</button>
+                </div>
+            </form>
+        </div>
+        <div id="result-container">
+            <p id="ibm-number">Your IBM: <span></span></p>
+            <p id="ibm-info">Current Status</p>
+            <h3>Check ratings:</h3>
+            <div id="ibm-table">
+                <div id="table-header">
+                    <h4>IBM</h4>
+                    <h4>Classification</h4>
+                    <h4>Obesity</h4>
+                </div>
+                <button id="back-btn">Return</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
