@@ -41,8 +41,8 @@ const data = [
 
   const bmiTable = document.querySelector(".bmi-table");
 
-  const heightInput = document.querySelector("height");
-  const weightInput = document.querySelector("weight");
+  const heightInput = document.querySelector("#height");
+  const weightInput = document.querySelector("#weight");
   const calcBtn = document.querySelector("#calc-btn");
   const clearBtn = document.querySelector("#clear-btn");
 
@@ -67,10 +67,38 @@ function createTable(data) {
         div.appendChild(obesity);
 
         bmiTable.appendChild(div);
-    })
+    });
+};
+
+function clearInputs() {
+    heightInput.value = " ";
+    weightInput.value = " ";
+};
+
+function validDigits(text) {
+  return text.replace(/[^0-9,]/g, "");
 }
 
+
+[heightInput, weightInput].forEach((el) => {
+  el.addEventListener("input", (e) => {
+    const updatedValue = validDigits(e.target.value);
+
+    e.target.value = updatedValue
+  })
+})
+
+
 // Events
+
+
+
+
+clearBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  clearInputs();
+});
+
 
 
 
